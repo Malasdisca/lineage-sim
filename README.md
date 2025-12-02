@@ -22,13 +22,13 @@ of combining digital life simulation with distributed rollback and event lineage
 ---
 
 ## 2. Architecture Diagram (Mermaid)
-
 ```mermaid
 flowchart TD
     A[Agent State] -->|step()| B[Simulation Service]
-    B -->|emit event| C[Kafka Topic: lineage-events]
+    B -->|emit event| C[Kafka Topic - lineage-events]
     C --> D[Lineage Consumer]
     D --> E[State Store]
     E -->|rollback| F[Rollback Service]
     C -->|replay events| G[Replay Service]
     G --> A
+```
