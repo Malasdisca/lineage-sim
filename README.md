@@ -246,7 +246,7 @@ Thus, this repository serves as both an engineering artifact and an exhibit supp
 ## 📌 12. License
 
 Apache License 2.0
-© Your Name, 2025
+© Gavin Mai, 2025
 
 ---
 
