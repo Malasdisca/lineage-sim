@@ -25,10 +25,11 @@ of combining digital life simulation with distributed rollback and event lineage
 ```mermaid
 flowchart TD
     A[Agent State] -->|step()| B[Simulation Service]
-    B -->|emit event| C[Kafka Topic - lineage-events]
+    B -->|emit| C[Kafka Topic - lineage events]
     C --> D[Lineage Consumer]
     D --> E[State Store]
     E -->|rollback| F[Rollback Service]
-    C -->|replay events| G[Replay Service]
+    C -->|replay| G[Replay Service]
     G --> A
 ```
+
